@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/customers', [CustomersController::class, 'show']);
+
+// TODO
+Route::get('/customers/{customer}', [CustomersController::class, ]);

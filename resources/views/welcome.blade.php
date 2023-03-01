@@ -32,9 +32,9 @@
         </div>
     </div>
 </main>
-<footer class="md:h-28 h-20 bg-red-700 text-slate-100 md:text-xl text-sm flex flex-col items-center justify-center">
+<footer class="md:h-24 h-16 bg-red-700 text-slate-100 md:text-xl text-sm flex flex-col items-center justify-center">
     <p class="">Copyright Pierre "Golluméo" Mauriello</p>
-    <p>All rights reserved 2023 - {{ now()->year }}</p>
+    <p>All rights reserved | 2023 - {{ now()->year }}</p>
 </footer>
 </body>
 </html>
