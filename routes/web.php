@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CompaniesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/customers', [CustomersController::class, 'show']);
+Route::get('/companies', [CompaniesController::class, 'index']);
 
 // TODO
-Route::get('/customers/{customer}', [CustomersController::class, ]);
+Route::get('/companies/{company}', [CompaniesController::class, ]);

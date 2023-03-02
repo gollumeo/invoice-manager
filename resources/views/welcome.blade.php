@@ -10,7 +10,7 @@
     <title>GolluméCRM</title>
 </head>
 <body class="flex h-screen flex-col">
-<header class="w-screen flex bg-red-700 h-1/4 text-slate-100 lg:text-7xl text-5xl items-center justify-center">
+<header class="w-screen flex bg-red-700 h-48 text-slate-100 lg:text-7xl text-5xl items-center justify-center font-black">
     <h1 class="text-center">Customers & Invoices Manager</h1>
 </header>
 

@@ -12,7 +12,7 @@ class CompaniesController extends Controller
      */
     public function index()
     {
-        return view('companies.index', ['companies' => Companies::latest()->get()->paginate(10)]);
+        return view('companies.index', ['companies' => Companies::all()]);
     }
 
     /**
@@ -20,7 +20,7 @@ class CompaniesController extends Controller
      */
     public function create()
     {
-        //
+        return view('companies.create');
     }
 
     /**
@@ -61,5 +61,10 @@ class CompaniesController extends Controller
     public function destroy(Companies $companies)
     {
         //
+    }
+
+    public function validate_company()
+    {
+        // TODO
     }
 }
