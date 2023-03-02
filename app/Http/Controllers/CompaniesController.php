@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Companies;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CompaniesController extends Controller
 {
@@ -12,7 +13,7 @@ class CompaniesController extends Controller
      */
     public function index()
     {
-        return view('companies.index', ['companies' => Companies::all()]);
+        return view('companies.index', ['companies' => DB::table('companies')->paginate(10)]);
     }
 
     /**
