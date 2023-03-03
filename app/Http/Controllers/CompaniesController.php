@@ -11,9 +11,22 @@ class CompaniesController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('companies.index', ['companies' => DB::table('companies')->paginate(10)]);
+        $query = $request->input('companies');
+        if (empty($query)) {
+            $companies = Companies::paginate(10);
+        } else {
+            $companies = Companies::where('name', 'like', '%' . $query . '%')
+                ->orWhere('address', 'like', '%' . $query . '%')
+                ->orWhere('city', 'like', '%' . $query . '%')
+                ->orWhere('zipcode', 'like', '%' . $query . '%')
+                ->orWhere('country', 'like', '%' . $query . '%')
+                ->orWhere('vat', 'like', '%' . $query . '%')
+                ->paginate(10);
+        }
+
+        return view('companies.index', compact('companies'));
     }
 
     /**

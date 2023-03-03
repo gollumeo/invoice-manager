@@ -19,7 +19,7 @@
         <h2 class="md:text-2xl text-lg font-bold self-center">Customers</h2>
         <i class="fa-solid fa-person-chalkboard fa-4x self-center text-red-700"></i>
         <div class="md:text-lg text-sm flex flex-col text-center mt-2 font-semibold text-rose-700">
-            <p class="transition active:text-black hover:scale-110"><a href="#">Show all customers</a></p>
+            <p class="transition active:text-black hover:scale-110"><a href="/companies">Show all customers</a></p>
             <p class="transition active:text-black hover:scale-110"><a href="#">Add a customer</a></p>
         </div>
     </div>
